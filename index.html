@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c6bbef72cd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/FinalProject/style.css">
+    <title>Shop app</title>
+</head>
+<body id="body">
+    <nav id="navbar">
+        <ul class="logoUl"><li><a id="#logo"><i class="fa-solid fa-bag-shopping logo"></i> Shop app</a></li></ul>
+        <ul>
+            
+            <li><a href="#homeSection">Home</a></li>
+            <li><a href="#productsSection">Products</a></li>
+            <li><a href="#customersSection">Customers</a></li>
+            <li><a href="#collaborationSection">Collaboration</a></li>
+            <li><a id="contactLink" class="contact" href="#contactSection">Contact</a></li>
+            <li><button id="cart" href="#cartSection" class="cart" onclick="showCart()">Shopping Cart</button><div id="favoritecard"></div></li>
+        </ul>
+    </nav> 
+    <div id="modal" class="modal">
+        <div id="heartdiv"><button id="heartButton" class="heartClass"><i class="fa fa-heart-o" aria-hidden="false"></i></button></div>
+        <div><button data-close-button id="closeButton">&times;</button></div>
+    </div>
+    <main id="mainContent">      
+        <section id="homeSection">
+            <div class="message home">
+                <p>Hello! <br><button id="startButton">Get started</button></p>
+            </div>
+            <div class="message">
+                <img src="https://cdn.pixabay.com/photo/2017/11/04/13/43/texture-2917553_960_720.jpg" alt="">
+            </div>
+        </section>
+        <section id="productsSection">
+            <h1 class="sectionHeading">Products</h1>
+            <div class="container">
+               
+            </div>
+        </section>
+        <section id="customersSection">
+            <h1 class="sectionHeading">Customers</h1>
+            <div class="container">
+                <div class="customerPhoto">
+                    <img src="https://cdn.pixabay.com/photo/2017/11/04/13/43/texture-2917553_960_720.jpg" alt="">
+                    <div class="textCard">
+                        <p class="customerText"></p>
+                    </div>
+                </div>
+                <div class="customerPhoto">
+                    <img src="https://cdn.pixabay.com/photo/2017/11/04/13/43/texture-2917553_960_720.jpg" alt="">
+                    <div class="textCard">
+                        <p class="customerText"></p>
+                    </div>
+                </div>
+                <div class="customerPhoto">
+                    <img src="https://cdn.pixabay.com/photo/2017/11/04/13/43/texture-2917553_960_720.jpg" alt="">
+                    <div class="textCard">
+                        <p class="customerText"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="collaborationSection">
+            <h1 class="sectionHeading">Collaboration</h1>
+            <button id="getStartedButton">Let's collaborate!</button>
+        </section>
+        <section id="contactSection">
+            <h1 class="sectionHeading">Contact us!</h1>
+            <p>Find me on:</p>
+            <p>
+                <a href="#"> <i class="fab fa-github"> <span class="icon">Github</span></i></a>
+                <a href="#"> <i class="fab fa-linkedin-in"> <span class="icon">Linkedin</span></i></a>
+                <a href="#"> <i class="fas fa-envelope-square"> <span class="icon">E-mail</span></i></a>
+            </p>
+        </section>
+    </main>
+    <div id="overlay"></div>
+    <script src="/FinalProject/script.js"></script>
+</body>
+</html>
+

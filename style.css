@@ -1,0 +1,362 @@
+html {
+    scroll-behavior: smooth; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+
+body img {
+    pointer-events: none;
+}
+
+#navbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 5px 0;
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 10px 10px -5px rgba(0,0,0,0.1);
+    z-index: +1;
+}
+
+#navbar ul {
+    display: flex;
+    margin: 10px 0px 10px auto;
+    width: 55%;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+#navbar ul li a, #cart, .contact{
+    margin-left: 3px; 
+    color: black;
+    opacity: 0.7;
+    font-size: 1.2rem;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover, #cart:hover, .contact:hover {
+    color: rgb(125, 181, 224);
+    opacity: 1;
+    text-decoration: underline;
+    transition: all 0.15s;
+}
+
+#navbar ul p #logo {
+    display: flex;
+    justify-content: left;
+    width: 1%;
+}
+
+#navbar {
+    display: inline-flex;
+    
+}
+
+#navbar .logoUl {
+    width: 20%;
+    margin: 10px 0px 10px 0;
+    padding: 0;
+}
+
+#navbar ul.logoUl {
+    width: 10%;
+}
+
+.sectionHeading {
+    font-size: 2rem;
+    text-align: center;
+    padding: 100px 0 20px 0;
+    margin: 0;
+}
+
+#homeSection {
+    padding: 200px 50px 200px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message {
+    width: 400px;
+    margin: 0 40px 0;
+    text-align: center;
+}
+
+div.home {
+    display: flex;
+    justify-content: center; 
+    font-size: 2rem;
+    align-items: center; 
+}
+
+.message img {
+    max-width: 100%;
+    height: 300px;
+    width: 400px;
+    object-fit:cover;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: space-around; 
+}
+
+.productPhoto {
+    margin: 3vh 0.0001vw;
+    border-radius: 15px;
+    transform-origin: initial;
+    transition: all 1s;
+    position: center;
+    width: 20vw;
+    height: 40vh;
+}
+
+.productPhoto:hover, .customerPhoto:hover {
+    transform: scale(1.05);
+    transition: all 1s;
+    border-radius: 15px;
+}
+
+.customerPhoto {
+    margin: 3vh 0.0001vw;
+    border-radius: 15px;
+    transform-origin: initial;
+    transition: all 1s;
+    position: center;
+    width: 30vw;
+    height: 60vh;
+}
+
+.productPhoto img {  
+    width: 20vw;
+    height: 40vh;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.4);
+}
+
+.customerPhoto img {
+    width: 30vw;
+    height: 60vh;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.4);
+}
+
+.productText {
+    text-align: center;
+    padding-bottom: 3px;
+
+}
+
+.productPhoto:hover .textCard {
+    visibility: visible;
+    opacity: 1;
+}
+.customerPhoto:hover .textCard {
+    visibility: visible;
+    opacity: 1;
+}
+
+.textCard {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    color: #000;
+    visibility: hidden;
+    opacity: 0; 
+    transition: 0.00001s;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+button:not(.cart):not(.favoriteDivAdded):not(.contact){
+    width: 200px;
+    height: 50px;
+    background-color: rgba(255,255,255, 0.4);
+    border-color: rgba(0, 0, 0, 100);
+    margin: 4rem;
+    color: black;
+}
+
+.favoriteDivAdded {
+    background-color: white;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+#collaborationSection {
+    text-align: center;
+}
+
+#contactSection {
+    background-color: black;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+#contactSection a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+#contactSection a:hover {
+    color: rgb(125, 181, 224);
+}
+
+.icon {
+    font-size: 10px;
+    width: 100%;
+}
+
+
+#popup {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    z-index: +2;
+    color: black;
+    border: 2px solid black;
+}
+
+.modal {
+    display: none;
+    justify-content: center;
+    position: absolute;
+    width: 70vw;
+    height: 70vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.4);
+    overflow: hidden;
+}
+
+#closeButton {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 2rem;
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    padding: 2% 3.5% 8% 0;
+    text-align: right;
+    clear: left;
+}
+
+#detailsPopupi {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+
+#photoPopupi, #photoPopupi img{
+    width: 20vw;
+    height: 40vh;
+    margin: 0 3rem;
+    position: absolute;
+    float: left;
+}
+
+#textPopupi {
+    width: 40vw;
+    height: 60vh;
+    margin: 0 6rem;
+    position: relative;
+    float: right;
+    text-align: center;
+}
+.productText, .productPrice{
+    font-weight: 900;
+}
+
+.fa-heart, .fa-heart-o {
+    float: left;
+    padding: 0;
+    position: absolute;
+    margin: 5% 5%;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 20px;
+}
+
+#heartButton , #heartdiv{
+    float: left;
+    width: 0;
+    height: 0;
+    margin: 3% 3%;
+    padding: 0;
+    position: absolute;
+    border: none;
+}
+
+#favoritecard {
+    display: none;
+    position: absolute;
+    right: 0.2rem;
+    top: calc(100% + .25rem);
+    background-color: white;
+    margin: .60rem;
+    border-radius: .25rem;
+    box-shadow:2px 2px 10px 1px rgba(0,0,0,0.4);
+}
+
+#favoritecard div {
+    margin: 1.5rem;
+}
+
+#cart, .contact {
+    position: relative;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
